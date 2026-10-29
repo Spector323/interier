@@ -1,0 +1,11 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Логотип ИНТЕРЬЕР — варианты</title><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>body{margin:0;font-family:system-ui,sans-serif;background:#f2f2f4;color:#2b2b2e;padding:24px}h1{font-weight:500}.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.c{background:#fff;border-radius:20px;padding:20px}.t{display:grid;grid-template-columns:1fr 1fr;gap:12px}.b{border-radius:14px;display:grid;place-items:center;height:260px}.d{background:#121214}.w{background:#fff;border:1px solid #e5e5e8}
+img{height:200px}button{margin-top:12px;border:0;border-radius:99px;background:#e2431f;color:#fff;padding:10px 22px;font-size:15px;cursor:pointer}p{color:#77777c;font-size:14px}</style>
+<h1>Варианты логотипа и анимации</h1><p>Нажмите «Повторить», чтобы проиграть анимацию заново.</p><div class="g" id="g"></div>
+<script>
+[["red-1","Вариант 1 — красный металл: ваш блик скользит по логотипу"],["red-2","Вариант 2 — красный «огонь»: логотип вырастает снизу вверх со вспышкой"],["gold","Золотой (для сравнения)"]].forEach(([n,t])=>{
+const a=n==="gold"?"gold-anim.png":n+"-anim.png",s=n+".png",c=document.createElement("div");c.className="c";
+c.innerHTML=`<h3>${t}</h3><div class="t"><div class="b d"><img class="an" src="${a}"></div><div class="b w"><img class="an" src="${a}"></div><div class="b d"><img src="${s}"></div><div class="b w"><img src="${s}"></div></div><button>Повторить</button>`;
+c.querySelector("button").onclick=()=>c.querySelectorAll(".an").forEach(i=>i.src=a+"?r="+Date.now());document.getElementById("g").append(c)});
+</script></html>

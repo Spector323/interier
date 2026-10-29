@@ -1,0 +1,18 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{background:#FFFFFF;color:#2B2B2E;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+:focus-visible{outline:2px solid #E2431F;outline-offset:2px}
+.logo-in{animation:logoIn .9s cubic-bezier(.3,.6,.3,1) both}
+@keyframes logoIn{from{clip-path:inset(100% 0 0 0);opacity:0}30%{opacity:1}to{clip-path:inset(0 0 0 0);opacity:1}}
+.logo-glow{filter:drop-shadow(0 0 22px rgba(255,190,80,.4))}
+[data-splash=on] #header-logo{opacity:0}
+.no-scrollbar{scrollbar-width:none}.no-scrollbar::-webkit-scrollbar{display:none}
+@media (prefers-reduced-motion:reduce){.logo-in{animation:none}*{transition-duration:.01ms!important}}
+
+@keyframes pulseGlow{0%,100%{opacity:.75}50%{opacity:1}}
+.glow-pulse{animation:pulseGlow 5s ease-in-out infinite}
+
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.float{animation:floaty 7s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.float{animation:none}}
+
+[data-splash-seen] #splash{display:none}
